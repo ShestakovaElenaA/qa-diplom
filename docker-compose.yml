@@ -22,9 +22,8 @@ services:
       - POSTGRES_DB=db
       - POSTGRES_USER=login
       - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
-  node:
-    image:
-    ports:
-    - '9999:9999'
-    volumes:
-    environment:
+  node-app:
+      build: ./gate-simulator
+      image: node-app:1.0
+      ports:
+        - '9999:9999'
