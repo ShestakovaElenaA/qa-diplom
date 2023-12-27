@@ -13,7 +13,7 @@ public class SQLHelper {
     private SQLHelper(){
     }
     private static Connection getCoon() throws SQLException {
-        return DriverManager.getConnection(System.getProperty("jdbc:mysql://localhost:3306/app"),"app","pass");
+        return DriverManager.getConnection(System.getProperty("db.url"),"app","pass");
     }
     @SneakyThrows
     public static String getStatusLastLineCreditRequestEntity(){

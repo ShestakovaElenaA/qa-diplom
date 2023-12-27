@@ -16,7 +16,7 @@ public class MainPage {
     private final SelenideElement byButton = $(byText("Купить"));
     private final SelenideElement byInCreditButton = $(byText("Купить в кредит"));
     private final SelenideElement headingBy = $(byText("Оплата по карте"));
-    private final SelenideElement headingByInCredit = $(byText("Оплата по карте"));
+    private final SelenideElement headingByInCredit = $(byText("Кредит по данным карты"));
     private final SelenideElement сardNumberField = $("[placeholder='0000 0000 0000 0000']");
 
     private final SelenideElement monthField = $("[placeholder='08']");
@@ -36,7 +36,6 @@ public class MainPage {
     private SelenideElement periodErrorYearField = $$("[class=input__inner]").findBy(text("Год")).$(byText("Истёк срок действия карты"));
     private SelenideElement errorYearField = $$("[class=input__inner]").findBy(text("Год")).$(byText("Неверный формат"));
     private SelenideElement errorOwnerField = $$("[class=input__inner]").findBy(text("Владелец")).$(byText("Поле обязательно для заполнения"));
-
     private SelenideElement errorCVCField = $$("[class=input__inner]").findBy(text("CVC/CVV")).$(byText("Неверный формат"));
     public MainPage(){
         heading.shouldBe(Condition.visible);
@@ -44,14 +43,15 @@ public class MainPage {
 
     public void verifyErrorNotification(String expectedText) {
         continueButton.click();
-        unsuccessfulNotification.shouldHave(exactText(expectedText)).shouldBe(visible, Duration.ofSeconds(15));
+        unsuccessfulNotification.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
     }
     public void verifySuccessfulNotification(String expectedText) {
         continueButton.click();
         successfulNotification.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
     }
-    public void notVerifySuccessfulNotification() {
-        successfulNotification.shouldNotBe(visible);
+    public void notSuccessfulNotification(String expectedText) {
+        continueButton.click();
+        successfulNotification.shouldBe(hidden, Duration.ofSeconds(15));
     }
     public void chooseBy(String expectedText) {
         byButton.click();
@@ -61,8 +61,36 @@ public class MainPage {
         byInCreditButton.click();
         headingByInCredit.shouldHave(exactText(expectedText)).shouldBe(visible);
     }
+    public void verifyErrorCardNumberField(String expectedText) {
+        errorCardNumberField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+    }
+    public void verifyPeriodErrorYearField(String expectedText) {
+        periodErrorYearField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+    }
+    public void verifyErrorYearField(String expectedText) {
+        errorYearField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+    }
+
+    public void verifyErrorMonthField(String expectedText) {
+        errorMonthField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+    }
+    public void verifyErrorOwnerField(String expectedText) {
+        errorOwnerField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+    }
+    public void verifyErrorCVCField(String expectedText) {
+        errorCVCField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+    }
+
     public MainPage enteringApprovedCard () {
         сardNumberField.setValue(DataHelper.getApprovedCardNumber());
+        return new MainPage();
+    }
+    public MainPage enteringDeclinedCard () {
+        сardNumberField.setValue(DataHelper.getDeclinedCardNumber());
+        return new MainPage();
+    }
+    public MainPage enteringRandomCard () {
+        сardNumberField.setValue(DataHelper.getRandomCardNumber());
         return new MainPage();
     }
     public MainPage enteringInvalidCard () {
@@ -76,7 +104,7 @@ public class MainPage {
     }
     public MainPage enteringInvalidCardValidityPeriod () {
         monthField.setValue(DataHelper.generateMonth(-1));
-        yearField.setValue(DataHelper.generateYear(0));
+        yearField.setValue(DataHelper.generateYear(-1));
         return new MainPage();
     }
     public MainPage enteringValidOwner() {
@@ -92,7 +120,8 @@ public class MainPage {
         return new MainPage();
     }
     public MainPage enteringInValidCVC() {
-        ownerField.setValue(DataHelper.generateInvalidCVC());
+        CVCField.setValue(DataHelper.generateInvalidCVC());
         return new MainPage();
     }
-}
+
+    }
