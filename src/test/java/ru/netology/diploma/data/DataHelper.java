@@ -1,6 +1,7 @@
 package ru.netology.diploma.data;
 
 import com.github.javafaker.Faker;
+import lombok.Data;
 import lombok.Value;
 
 import java.time.LocalDate;
@@ -14,16 +15,16 @@ public class DataHelper {
     private DataHelper() {
     }
 
-    public static CardNumber getApprovedCardNumber() {
-        return new CardNumber("4444 4444 4444 4441");
+    public static String getApprovedCardNumber() {
+        return "4444 4444 4444 4441";
     }
 
-    public static CardNumber getDeclinedCardNumber() {
-        return new CardNumber("4444 4444 4444 4442");
+    public static String getDeclinedCardNumber() {
+        return "4444 4444 4444 4442";
     }
 
-    public static CardNumber getRandomCardNumber() {
-        return new CardNumber(faker.business().creditCardNumber());
+    public static String getRandomCardNumber() {
+        return faker.business().creditCardNumber();
     }
 
     public static String generateMonth(int shift) {
@@ -50,47 +51,4 @@ public class DataHelper {
         return faker.numerify("##");
     }
 
-    @Value
-    public static class CardNumber {
-        String cardNumber;
-    }
-
-    @Value
-    public static class bankIdLastLineCreditRequestEntity {
-        String bank_id;
-    }
-
-    @Value
-    public static class statusLastLineCreditRequestEntity {
-        String status;
-    }
-
-    @Value
-    public static class transactionIdLastLinePaymentRequestEntity {
-        String transaction_id;
-    }
-
-    @Value
-    public static class statusLastLinePaymentRequestEntity {
-        String status;
-    }
-
-    @Value
-    public static class paymentIdLastLineOrderEntity {
-        String payment_id;
-    }
-
-    @Value
-    public static class countCreditRequestEntity {
-        int countCredit;
-    }
-    @Value
-    public static class countOrderEntity {
-        int countOrder;
-    }
-    @Value
-    public static class countPaymentEntity {
-        int countPayment;
-    }
-
-}
+   }
