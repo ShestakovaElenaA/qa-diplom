@@ -8,6 +8,7 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -28,7 +29,7 @@ public class MainPage {
     private final SelenideElement CVCField = $("[placeholder='999']");
 
     private final SelenideElement continueButton = $(byText("Продолжить"));
-    private final SelenideElement successfulNotification = $(byText("Операция одобрена Банком."));
+    private final SelenideElement successfulNotification = $(withText("Операция одобрена Банком."));
     private final SelenideElement unsuccessfulNotification = $(byText("Ошибка! Банк отказал в проведении операции."));
 
     private SelenideElement errorCardNumberField = $$("[class=input__inner]").findBy(text("Номер карты")).$(byText("Неверный формат"));

@@ -12,9 +12,16 @@ public class SQLHelper {
 
     private SQLHelper(){
     }
+
     private static Connection getCoon() throws SQLException {
         return DriverManager.getConnection(System.getProperty("db.url"),"app","pass");
     }
+    /*private static Connection getCoon() throws SQLException {
+        var value = System.getProperty("dbmysql.url");
+        return DriverManager.getConnection(value,"app","pass");
+
+    }*/
+
     @SneakyThrows
     public static String getStatusLastLineCreditRequestEntity(){
         var codeSQL = "SELECT status FROM credit_request_entity order by created DESC limit 1;";
