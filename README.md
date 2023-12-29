@@ -28,6 +28,7 @@
 "-Dspring.datasource.username=app" 
 
 "-Dspring.datasource.password=pass" -jar aqa-shop.jar 
+
 3. Для запуска автотестов:
 
 * с проверкой БД MySQL в командной строке выполнить команду ./gradlew test
