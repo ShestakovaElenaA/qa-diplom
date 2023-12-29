@@ -15,8 +15,8 @@ services:
       - '5432:5432'
     environment:
       - POSTGRES_DB=db
-      - POSTGRES_USER=login
-      - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=pass
   node-app:
       build: ./gate-simulator
       image: node-app:1.0

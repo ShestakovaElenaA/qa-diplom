@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.diploma.test.BuyingTourTest" tests="11" skipped="0" failures="3" errors="0" timestamp="2023-12-28T04:33:19" hostname="DESKTOP-5THN1NT" time="91.328">
+<testsuite name="ru.netology.diploma.test.BuyingTourTest" tests="11" skipped="0" failures="3" errors="0" timestamp="2023-12-29T03:25:42" hostname="DESKTOP-5THN1NT" time="93.265">
   <properties/>
-  <testcase name="Successful purchase of a tour with payment on credit with valid APPROVED card." classname="ru.netology.diploma.test.BuyingTourTest" time="14.202"/>
-  <testcase name="Error occurred when submitting a completed form with invalid CVC/CVV data." classname="ru.netology.diploma.test.BuyingTourTest" time="1.543"/>
-  <testcase name="Receiving an error when filling out the card payment form with expired card data." classname="ru.netology.diploma.test.BuyingTourTest" time="1.372"/>
-  <testcase name="The bank's refusal to purchase a tour using a debit card when filling out the form with valid DECLINED card data." classname="ru.netology.diploma.test.BuyingTourTest" time="16.593">
-    <failure message="Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738032565.0.png&#13;&#10;Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738032565.0.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}
+  <testcase name="Successful purchase of a tour with payment on credit with valid APPROVED card." classname="ru.netology.diploma.test.BuyingTourTest" time="11.827"/>
+  <testcase name="Error occurred when submitting a completed form with invalid CVC/CVV data." classname="ru.netology.diploma.test.BuyingTourTest" time="1.483"/>
+  <testcase name="Receiving an error when filling out the card payment form with expired card data." classname="ru.netology.diploma.test.BuyingTourTest" time="1.286"/>
+  <testcase name="The bank's refusal to purchase a tour using a debit card when filling out the form with valid DECLINED card data." classname="ru.netology.diploma.test.BuyingTourTest" time="16.732">
+    <failure message="Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820372971.0.png&#13;&#10;Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820372971.0.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}
 Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'
 Actual value: hidden
-Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738032565.0.png
-Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738032565.0.html
+Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820372971.0.png
+Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820372971.0.html
 Timeout: 15 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:149)
 	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:127)
@@ -112,15 +112,15 @@ Timeout: 15 s.
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Getting an error when submitting a form with letters in the card number." classname="ru.netology.diploma.test.BuyingTourTest" time="1.283"/>
-  <testcase name="The bank's refusal to purchase a tour using a debit card when filling out the form with card data that is not registered in the system" classname="ru.netology.diploma.test.BuyingTourTest" time="4.228"/>
-  <testcase name="Purchase of a tour when filling out the form with valid debit card data APPROVED" classname="ru.netology.diploma.test.BuyingTourTest" time="7.794"/>
-  <testcase name="The bank's refusal to purchase a tour on credit when filling out the form with card data that is not registered in the system." classname="ru.netology.diploma.test.BuyingTourTest" time="9.462"/>
-  <testcase name="Error when buying a tour with invalid cardholder data on the form." classname="ru.netology.diploma.test.BuyingTourTest" time="16.983">
-    <failure message="Element not found {[class=input__inner].findBy(text &quot;Владелец&quot;)/by text: Поле обязательно для заполнения}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738072224.1.png&#13;&#10;Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738072224.1.html&#13;&#10;Timeout: 15 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class=input__inner].findBy(text &quot;Владелец&quot;)/by text: Поле обязательно для заполнения}
+  <testcase name="Getting an error when submitting a form with letters in the card number." classname="ru.netology.diploma.test.BuyingTourTest" time="1.346"/>
+  <testcase name="The bank's refusal to purchase a tour using a debit card when filling out the form with card data that is not registered in the system" classname="ru.netology.diploma.test.BuyingTourTest" time="10.302"/>
+  <testcase name="Purchase of a tour when filling out the form with valid debit card data APPROVED" classname="ru.netology.diploma.test.BuyingTourTest" time="9.587"/>
+  <testcase name="The bank's refusal to purchase a tour on credit when filling out the form with card data that is not registered in the system." classname="ru.netology.diploma.test.BuyingTourTest" time="6.252"/>
+  <testcase name="Error when buying a tour with invalid cardholder data on the form." classname="ru.netology.diploma.test.BuyingTourTest" time="16.724">
+    <failure message="Element not found {[class=input__inner].findBy(text &quot;Владелец&quot;)/by text: Поле обязательно для заполнения}&#13;&#10;Expected: visible&#13;&#10;Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820417297.1.png&#13;&#10;Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820417297.1.html&#13;&#10;Timeout: 15 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {[class=input__inner].findBy(text &quot;Владелец&quot;)/by text: Поле обязательно для заполнения}
 Expected: visible
-Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738072224.1.png
-Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738072224.1.html
+Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820417297.1.png
+Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820417297.1.html
 Timeout: 15 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -231,10 +231,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [09f4d4dd551f46cbcbdfd9b63f32c3ba, findChildElement {id=E335714DC32DDF708C4F6E5E10D2495C_element_335, using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [caefc7623f438082f559d9a9a4dea715, findChildElement {id=58E52F76D380D667D27ABFE35D8CAFFA_element_275, using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Поле обязательно для заполнения&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.111, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:10347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:10347/devtoo..., se:cdpVersion: 120.0.6099.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 09f4d4dd551f46cbcbdfd9b63f32c3ba
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.111, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:17533}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:17533/devtoo..., se:cdpVersion: 120.0.6099.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: caefc7623f438082f559d9a9a4dea715
 	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
 	at java.base@11.0.19/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@11.0.19/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
@@ -257,13 +257,13 @@ Session ID: 09f4d4dd551f46cbcbdfd9b63f32c3ba
 	... 97 more
 </failure>
   </testcase>
-  <testcase name="Receiving an error when sending an empty application form for the purchase of a tour." classname="ru.netology.diploma.test.BuyingTourTest" time="1.118"/>
-  <testcase name="The bank's refusal to purchase a tour on credit when filling out the form with valid DECLINED card data." classname="ru.netology.diploma.test.BuyingTourTest" time="16.706">
-    <failure message="Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738090015.2.png&#13;&#10;Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738090015.2.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}
+  <testcase name="Receiving an error when sending an empty application form for the purchase of a tour." classname="ru.netology.diploma.test.BuyingTourTest" time="1.035"/>
+  <testcase name="The bank's refusal to purchase a tour on credit when filling out the form with valid DECLINED card data." classname="ru.netology.diploma.test.BuyingTourTest" time="16.66">
+    <failure message="Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}&#13;&#10;Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'&#13;&#10;Actual value: hidden&#13;&#10;Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820434997.2.png&#13;&#10;Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820434997.2.html&#13;&#10;Timeout: 15 s." type="com.codeborne.selenide.ex.ElementShould">Element should be visible {by text: Ошибка! Банк отказал в проведении операции.}
 Element: '&lt;div class=&quot;notification__content&quot; displayed:false&gt;&lt;/div&gt;'
 Actual value: hidden
-Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738090015.2.png
-Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703738090015.2.html
+Screenshot: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820434997.2.png
+Page source: file:/C:/Users/User/IdeaProjects/qa-diplom/build/reports/tests/1703820434997.2.html
 Timeout: 15 s.
 	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:149)
 	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:127)
@@ -367,9 +367,9 @@ Timeout: 15 s.
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[дек. 28, 2023 7:33:24 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[дек. 29, 2023 6:25:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 120
-дек. 28, 2023 7:33:24 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+дек. 29, 2023 6:25:46 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 120.0.6099.111. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

@@ -16,11 +16,6 @@ public class SQLHelper {
     private static Connection getCoon() throws SQLException {
         return DriverManager.getConnection(System.getProperty("db.url"),"app","pass");
     }
-    /*private static Connection getCoon() throws SQLException {
-        var value = System.getProperty("dbmysql.url");
-        return DriverManager.getConnection(value,"app","pass");
-
-    }*/
 
     @SneakyThrows
     public static String getStatusLastLineCreditRequestEntity(){

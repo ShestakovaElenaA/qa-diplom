@@ -30,14 +30,11 @@ dependencies {
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testImplementation 'com.codeborne:selenide:6.17.1'
     testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
+    testImplementation 'org.postgresql:postgresql:42.4.0'
 }
 
 test {
     useJUnitPlatform()
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
     systemProperty 'db.url', System.getProperty('db.url',"jdbc:mysql://localhost:3306/app")
-    /*systemProperty 'dbmysql.url', System.getProperty('db.url',"jdbc:mysql://localhost:3306/app")
-    systemProperty 'dbpostgresql.url', System.getProperty('db.url',"jdbc:postgresql://localhost:5432/db")
-    systemProperty 'dbmysql.url', System.getProperty('dbmysql.url', "default_value")*/
-
 }
