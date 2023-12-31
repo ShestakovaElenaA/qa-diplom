@@ -1,9 +1,9 @@
     Thumbs.db*
     .DS_Store
     HELP.md
-    .gradle/
-    .build/
-    .data/
+    gradle/
+    build/
+    data/
 
     ### STS ###
     .apt_generated
@@ -15,7 +15,7 @@
     .sts4-cache
 
     ### IntelliJ IDEA ###
-    .idea/
+    idea/
     *.iws
     *.iml
     *.ipr
