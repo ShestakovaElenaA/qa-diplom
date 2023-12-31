@@ -5,8 +5,9 @@
 Автотестами проверено 11 тест-кейсов.
 
 **Результат тестирования:** 72,72 % кейсов пройдены успешно.
-![img_1.png](../img_1.png)
-![img_2.png](../img_2.png)
+![img_1.png](img_1.png)
+![img.png](img.png)
+
 Выявленные дефекты со скриншотами и описанием оформлены в issue:
 
 https://github.com/ShestakovaElenaA/qa-diplom/issues/1

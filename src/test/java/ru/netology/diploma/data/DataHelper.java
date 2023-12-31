@@ -46,9 +46,10 @@ public class DataHelper {
         var faker = new Faker(new Locale("en"));
         return faker.numerify("###");
     }
+
     public static String generateInvalidCVC() {
         var faker = new Faker(new Locale("en"));
         return faker.numerify("##");
     }
 
-   }
+}

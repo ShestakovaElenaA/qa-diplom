@@ -38,7 +38,8 @@ public class MainPage {
     private SelenideElement errorYearField = $$("[class=input__inner]").findBy(text("Год")).$(byText("Неверный формат"));
     private SelenideElement errorOwnerField = $$("[class=input__inner]").findBy(text("Владелец")).$(byText("Поле обязательно для заполнения"));
     private SelenideElement errorCVCField = $$("[class=input__inner]").findBy(text("CVC/CVV")).$(byText("Неверный формат"));
-    public MainPage(){
+
+    public MainPage() {
         heading.shouldBe(Condition.visible);
     }
 
@@ -46,83 +47,92 @@ public class MainPage {
         continueButton.click();
         unsuccessfulNotification.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
     }
+
     public void verifySuccessfulNotification(String expectedText) {
         continueButton.click();
         successfulNotification.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
     }
-    public void notSuccessfulNotification(String expectedText) {
+
+    public void verifySuccessfulNotificationIsNotVisible() {
         continueButton.click();
         successfulNotification.shouldBe(hidden, Duration.ofSeconds(15));
     }
+
     public void chooseBy(String expectedText) {
         byButton.click();
         headingBy.shouldHave(exactText(expectedText)).shouldBe(visible);
     }
+
     public void chooseByInCredit(String expectedText) {
         byInCreditButton.click();
         headingByInCredit.shouldHave(exactText(expectedText)).shouldBe(visible);
     }
+
     public void verifyErrorCardNumberField(String expectedText) {
-        errorCardNumberField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+        errorCardNumberField.shouldBe(visible).shouldHave(exactText(expectedText));
     }
+
     public void verifyPeriodErrorYearField(String expectedText) {
-        periodErrorYearField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+        periodErrorYearField.shouldBe(visible).shouldHave(exactText(expectedText));
     }
+
     public void verifyErrorYearField(String expectedText) {
-        errorYearField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+        errorYearField.shouldBe(visible).shouldHave(exactText(expectedText));
     }
 
     public void verifyErrorMonthField(String expectedText) {
-        errorMonthField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
-    }
-    public void verifyErrorOwnerField(String expectedText) {
-        errorOwnerField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
-    }
-    public void verifyErrorCVCField(String expectedText) {
-        errorCVCField.shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText(expectedText));
+        errorMonthField.shouldBe(visible).shouldHave(exactText(expectedText));
     }
 
-    public MainPage enteringApprovedCard () {
+    public void verifyErrorOwnerField(String expectedText) {
+        errorOwnerField.shouldBe(visible).shouldHave(exactText(expectedText));
+    }
+
+    public void verifyErrorCVCField(String expectedText) {
+        errorCVCField.shouldBe(visible).shouldHave(exactText(expectedText));
+    }
+
+    public void enteringApprovedCard() {
         сardNumberField.setValue(DataHelper.getApprovedCardNumber());
-        return new MainPage();
     }
-    public MainPage enteringDeclinedCard () {
+
+    public void enteringDeclinedCard() {
         сardNumberField.setValue(DataHelper.getDeclinedCardNumber());
-        return new MainPage();
+
     }
-    public MainPage enteringRandomCard () {
+
+    public void enteringRandomCard() {
         сardNumberField.setValue(DataHelper.getRandomCardNumber());
-        return new MainPage();
     }
-    public MainPage enteringInvalidCard () {
+
+    public void enteringInvalidCard() {
         сardNumberField.setValue("AAAA BBBB CCCC DDDD");
-        return new MainPage();
     }
-    public MainPage enteringValidCardValidityPeriod () {
+
+    public void enteringValidCardValidityPeriod() {
         monthField.setValue(DataHelper.generateMonth(1));
         yearField.setValue(DataHelper.generateYear(1));
-        return new MainPage();
-    }
-    public MainPage enteringInvalidCardValidityPeriod () {
-        monthField.setValue(DataHelper.generateMonth(-1));
-        yearField.setValue(DataHelper.generateYear(-1));
-        return new MainPage();
-    }
-    public MainPage enteringValidOwner() {
-        ownerField.setValue(DataHelper.generateOwner("en"));
-        return new MainPage();
-    }
-    public MainPage enteringInValidOwner() {
-        ownerField.setValue(DataHelper.generateOwner("ru"));
-        return new MainPage();
-    }
-    public MainPage enteringValidCVC() {
-        CVCField.setValue(DataHelper.generateCVC());
-        return new MainPage();
-    }
-    public MainPage enteringInValidCVC() {
-        CVCField.setValue(DataHelper.generateInvalidCVC());
-        return new MainPage();
     }
 
+    public void enteringInvalidCardValidityPeriod() {
+        monthField.setValue(DataHelper.generateMonth(-1));
+        yearField.setValue(DataHelper.generateYear(-1));
     }
+
+    public void enteringValidOwner() {
+        ownerField.setValue(DataHelper.generateOwner("en"));
+    }
+
+    public void enteringInValidOwner() {
+        ownerField.setValue(DataHelper.generateOwner("ru"));
+    }
+
+    public void enteringValidCVC() {
+        CVCField.setValue(DataHelper.generateCVC());
+    }
+
+    public void enteringInValidCVC() {
+        CVCField.setValue(DataHelper.generateInvalidCVC());
+    }
+
+}
